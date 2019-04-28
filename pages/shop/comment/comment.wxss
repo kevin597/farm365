@@ -1,0 +1,51 @@
+/* pages/shop/comment/pic.wxss */
+.upload-img-btn{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  display: block;
+  border: 1px dashed #999999;
+  text-align: center;
+  color: #999999;
+  position: relative;
+  box-sizing: border-box;
+  margin: 25rpx;
+  float: left;
+}
+.upload-img-btn:before{
+  content: '+';
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  font-size: 120rpx;
+  font-weight: normal;
+  top: 50rpx;
+  left: 50rpx;
+}
+.img-v{
+  overflow: hidden;
+}
+.img {
+  width: 200rpx;
+  height: 260rpx;
+  border-radius: 8rpx;
+  display: block;
+  border: 1px dashed #999999;
+  text-align: center;
+  color: #999999;
+  position: relative;
+  box-sizing: border-box;
+  margin: 25rpx;
+  float: left;
+}
+.img image {
+  width: 196rpx;
+  height: 196rpx;
+  display: block;
+}
+.delete-btn {
+ width: 200rpx;
+ height: 60rpx;
+ font-size: 36rpx;
+ line-height: 60rpx;
+}

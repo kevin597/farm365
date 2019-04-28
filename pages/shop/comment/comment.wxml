@@ -1,0 +1,27 @@
+<!--pages/shop/comment/pic.wxml-->
+<!-- 自定义标题 -->
+<my-component my-property='{{navTitleText}}' />
+
+<text>集市，评价</text>
+
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+
+    <textarea placeholder="请输入您对购买商品的评价" name="content" />
+
+    <!-- 上传图片 -->
+    <view class="img-v">
+      <!-- 上传的图片列表 -->
+      <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+      </view>
+      <!-- 添加图片按钮 -->
+      <view class="upload-img-btn" wx:if="{{imgs.length < 9}}" data-gid="imgs" bindtap="chooseImg"></view>
+    </view>
+
+
+
+    <button type='primary' form-type="submit">确认评价</button>
+  </form>
+</view>

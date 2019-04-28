@@ -1,0 +1,19 @@
+{
+  "pages": [
+    
+    "pages/farm/index/index",
+    "pages/logs/logs",
+    "pages/shop/index/index",
+    "pages/user/index/index",
+    "pages/shop/comment/comment"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

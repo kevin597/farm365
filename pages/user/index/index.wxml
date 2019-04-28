@@ -1,0 +1,3 @@
+<!--pages/user/index/index.wxml-->
+<my-component my-property='{{navTitleText}}' />
+<text>会员，个人中心</text>
