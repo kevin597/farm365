@@ -1,12 +1,30 @@
 {
   "pages": [
-    
-    "pages/farm/index/index",
-    "pages/logs/logs",
+    "pages/shop/product/product",
     "pages/shop/index/index",
+    "pages/farm/index/index",
+
+   
+
+    "pages/logs/logs",
     "pages/user/index/index",
-    "pages/shop/comment/comment"
+    "pages/user/shopCar/shopCar",
+    "pages/user/eggs/eggs",
+    "pages/user/chicken/chicken",
+    "pages/user/vip/vip",
+    "pages/user/vip/vip_renew",
+    "pages/user/goods_order/goods_order",
+    "pages/user/order_dtl/order_dtl",
+    "pages/user/team_order/team_order",
+    "pages/user/customer/customer",
+    "pages/user/comment/comment",
+    "pages/user/agent/agent",
+    "pages/user/store/store",
+    "pages/user/decorate/decorate",
+    "pages/user/update/update",
+    "pages/shop/comment/comment",
     
+    "pages/shop/prolist/prolist"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,5 +1,6 @@
 {
-  "usingComponents": {
-    "my-component": "/components/component"
-  }
+  "navigationStyle": "default",
+  "navigationBarTitleText": "集市",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
 }

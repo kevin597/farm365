@@ -48,11 +48,13 @@ page {
   line-height: 40rpx;
   display: block;
   border: 0 none;
-  outline:0 none;
-  
+  outline: 0 none;
   background: transparent;
 }
-button::after{ border: none; }
+
+button::after {
+  border: none;
+}
 
 .qiandao {
   left: 30rpx;
@@ -206,6 +208,8 @@ button::after{ border: none; }
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0; 
+  right: 0;
   background: #000;
   opacity: 0.5;
   overflow: hidden;
@@ -262,6 +266,7 @@ button::after{ border: none; }
   box-shadow: 0 2px 4px #d4ba9e inset;
   padding: 30rpx;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .modal-text-box-noe {
@@ -286,8 +291,98 @@ button::after{ border: none; }
   text-indent: 2em;
 }
 
-.modal-top-text{
+.modal-top-text {
   font-size: 45rpx;
   color: #fde3a7;
   font-weight: bold;
+}
+
+.h100 {
+  height: 100rpx;
+  font-size: 32rpx;
+  color: #774304;
+}
+
+.mt180 {
+  height: 700rpx;
+  width: 570rpx;
+  margin: 0 auto;
+  margin-top: 190rpx;
+}
+
+.mb30 {
+  margin: 30rpx auto;
+}
+
+.userinfo-img {
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.friend-top {
+  text-align: center;
+  line-height: 70rpx;
+  font-weight: bold;
+}
+
+.userinfo-top, .friend-top, .userinfo-hand, .userinfo-img {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.news-hand {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #faac4f;
+  margin-right: 20rpx;
+}
+
+.news-hand-img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 5rpx auto;
+}
+
+.news-h {
+  height: auto;
+  min-height: 100rpx;
+  font-size: 32rpx;
+  margin: 15rpx auto;
+  color: #774304;
+  position: relative;
+  margin-left: 20rpx;
+  overflow: visible;
+}
+
+.news-h:after {
+  content: '';
+  position: absolute;
+  left: -32rpx;
+  top: 50rpx;
+  width: 0;
+  height: 0;
+  border-width: 18rpx;
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: currentColor;
+  color: #e9d6be;
+}
+
+.news-time {
+  font-size: 26rpx;
+  color: rgba(119, 67, 4, 0.7);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-full {
+  flex: 1;
+  overflow: hidden;
 }

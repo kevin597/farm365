@@ -35,7 +35,8 @@ App({
   },
   globalData: {
     isIphoneX: false,
-    userInfo: null
+    userInfo: null,
+    shopCar:[],//购物车
   },
   onShow: function () {
     let that = this;

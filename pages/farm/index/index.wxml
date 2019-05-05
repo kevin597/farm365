@@ -59,12 +59,32 @@
 
   <!-- 消息动态 -->
   <block wx:elif="{{modal.newsModal}}">
-    消息动态
+    <scroll-view scroll-y class='mt180'>
+      <view class='flex-row' wx:for="{{news}}" wx:key="index">
+        <view class='news-hand'>
+          <image class='news-hand-img' src='/images/farm/news_hand.png'></image>
+        </view>
+        <view class='modal-text-box news-h'>
+          <view class='news-time'>{{item.time}}</view>
+          <view class='news-title'>{{item.title}}</view>
+        </view>
+      </view>
+    </scroll-view>
   </block>
 
   <!-- 好友排行 -->
   <block wx:elif="{{modal.friendModal}}">
-    好友排行
+    <scroll-view scroll-y class='mt180'>
+      <view class='modal-text-box h100 mb30 flex-row' wx:for="{{friend}}" wx:key="index">
+        <image wx:if="{{index<3}}" class='userinfo-top' src='/images/farm/top{{index+1}}.png'></image>
+        <view wx:else class='friend-top'>{{index+1}}</view>
+        <image class='userinfo-img' src='{{item.photo}}'></image>
+        <view class='flex-full'>{{item.name}}</view>
+        <view wx:if="{{item.statu==1}}" class=''>
+          <image class='userinfo-hand' src='/images/farm/hand.png'></image>
+        </view>
+      </view>
+    </scroll-view>
   </block>
 
   <!-- 关闭弹窗 -->

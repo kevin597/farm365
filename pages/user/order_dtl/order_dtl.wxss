@@ -1,0 +1,86 @@
+/* pages/user/order_dtl/order_dtl.wxss */
+@import '/pages/user/common.wxss';
+
+.dtl_wrap{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 状态 */
+.statu_mod{
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.statu_mod .bg{
+  width: 100%;
+  left: 0;
+  top:0;
+  height: 100%;
+  position: absolute;
+}
+.statu_mod .box{
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 70rpx;
+}
+.statu_mod .box .big{
+  font-size: 16px;
+}
+.statu_mod .box .dtl{
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: .8;
+}
+.statu_mod .img{
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-right: 80rpx;
+}
+
+/* 收货地址 */
+.addr_mod{
+  padding: 15px;
+  line-height: 1.2;
+}
+.addr_mod .addr_top{
+  padding-bottom:6px;
+}
+.addr_mod .addr_top .tel{
+  color: #888;
+  padding-left:15px;
+}
+
+
+.bottom-mod{
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 0;
+  padding: 0 15px;
+}
+.bottom-mod .btn{
+  display:inline-block;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  padding: 0 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.bottom-mod .btn_1{
+  color: #f7824e;
+  border: 1px solid #f7824e;
+  line-height: 34px;
+}
+.bottom-mod .btn_2{
+  background: -webkit-linear-gradient(left,#f15c6c,#f7824e);
+  background: linear-gradient(to right,#f15c6c,#f7824e);
+  color: #fff;
+}

@@ -32,7 +32,71 @@ Page({
     },
     show: false, //控制下拉列表的显示隐藏，false隐藏、true显示
     selectData: ['张小姐的口碑农场', '李先生的口碑农场', '王阿姨的口碑农场'], //农场下拉列表的数据
-    index: 0, //选择的下拉列 表下标,
+    index: 0, //选择的下拉列 表下标
+
+    friend: [{
+        id: 1,
+        name: '香水百合1',
+        statu: '1',
+        photo: '/images/default/180x180.jpg'
+      },
+      {
+        id: 2,
+        name: '香水百合2',
+        statu: '0',
+        photo: '/images/default/180x180.jpg'
+      },
+      {
+        id: 3,
+        name: '香水百合3',
+        statu: '0',
+        photo: '/images/default/180x180.jpg'
+      },
+      {
+        id: 4,
+        name: '香水百合4',
+        statu: '0',
+        photo: '/images/default/180x180.jpg'
+      },
+      {
+        id: 5,
+        name: '香水百合5',
+        statu: '0',
+        photo: '/images/default/180x180.jpg'
+      },
+      {
+        id: 6,
+        name: '香水百合6',
+        statu: '0',
+        photo: '/images/default/180x180.jpg'
+      }
+    ],
+
+    news: [{
+        time: '2019-04-11 08:50',
+        title: '晚晴天 偷了你一只老母鸡'
+      },
+      {
+        time: '2019-04-11 08:50',
+        title: '晚晴天 暗中观察了一圈你的农场'
+      },
+      {
+        time: '2019-04-11 08:50',
+        title: 'Amy 偷了你一只老母鸡'
+      },
+      {
+        time: '2019-04-11 08:50',
+        title: '晚晴天 偷了你一只老母鸡'
+      },
+      {
+        time: '2019-04-11 08:50',
+        title: '香水小百合 偷了你一只老母鸡'
+      },
+      {
+        time: '2019-04-11 08:50',
+        title: '晚晴天 偷了你一只老母鸡'
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
