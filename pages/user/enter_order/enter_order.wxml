@@ -1,0 +1,77 @@
+<!--pages/user/enter_order/enter_order.wxml-->
+<!-- 状态切换 -->
+<orderNav nav='{{nav}}' statu='{{statu}}' bindtabNav='nav_tab'></orderNav>
+
+<scroll-view scroll-y='true' style='height:calc(100% - 90px);padding-top:44px;'>
+  <view style='width:100%;overflow:hidden;padding-bottom:15px;'>
+
+    <block wx:if='{{nav == 0}}'>
+      <!-- 物流配送 -->
+      <view class='addr_mod arrow_gray h4 bg-w dm-mt' style='padding-right:20px;'>
+        <view class='addr_top'>张小姐<text class='tel'>18756197235</text></view>
+        <view class='addr_bot'>安徽省合肥市蜀山区望江西路与肥西路交口西湖国际广场C座1706室</view>
+      </view>
+    </block>
+    <block wx:else>
+      <!-- 门店自提 -->
+      <view class='addr_mod arrow_gray h4 bg-w dm-mt' style='padding-right:20px;'>
+        <view class='addr_top'>蜀山区鲜丰水果自营店</view>
+        <view class='addr_bot'>安徽省合肥市蜀山区望江西路与肥西路交口西湖国际广场C座1706室</view>
+      </view>
+      <view class='top-line dm-norlist bg-w'>
+        <view class='list flex-row'>
+          <view class='name'>自提时间</view>
+          <view class='cot tr flex-full'>04-15 07:00~20:00</view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 商品列表 -->
+      <view class='order_mod'>
+        <view class='order_list'>
+          <view class='order_top flex-row bottom-line'>
+            <view class='flex-full dm-clearfix'>
+              <view class='store arrow_gray dm-left'>{{order.store}}</view>
+            </view>
+          </view>
+          <view class='goods_list bottom-line'>
+            <view class='box flex-row bottom-line' wx:for='{{order.goods}}' wx:key='item.id'>
+              <view class='photo cover'>
+                <image class='img' src='{{item.photo}}'></image>
+              </view>
+              <view class='info flex-full'>
+                <view class='name'>{{item.name}}</view>
+                <view class='oth dm-clearfix'>
+                  <view class='dm-left money'>￥{{item.single}}</view>
+                  <view class='dm-right num'>x{{item.num}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class='total_val tr'>共<text class='val'>2件</text>小计：<text class='val'>￥100.00</text></view>
+        </view>
+      </view>
+      <!-- 商品列表 end -->
+
+      <view class='dm-norlist bg-w dm-mb'>
+        <view class='input flex-row bottom-line'>
+          <view class='name' style='color:#333'>备注</view>
+          <view class='cot flex-full'>
+            <input class='max-input tr' placeholder='备注您的要求' />
+          </view>
+        </view>
+        <view class='list flex-row'>
+          <view class='name' style='color:#333'>200会员权益</view>
+          <view class='cot flex-full tr'>赠送20鸡蛋</view>
+        </view>
+      </view>
+
+      <button class='submit_btn' bindtap='skip_vip'>开通365会员，可获得30鸡蛋</button>
+
+  </view>
+</scroll-view>
+
+<view class='bottom_mod flex-row'>
+  <view class='flex-full val'>合计：<text class='main_color'>￥100.00</text></view>
+  <view class='btn'>立即支付</view>
+</view>

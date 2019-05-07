@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/shop/product/product",
-    "pages/shop/index/index",
+    "pages/shop/order/product",
+    "pages/shop/submit_order/submit_order",
+    "pages/shop/cart/cart",
+    "pages/shop/shop/shop",
     "pages/farm/index/index",
-
-   
-
+    "pages/shop/index/index",
     "pages/logs/logs",
     "pages/user/index/index",
     "pages/user/shopCar/shopCar",
+    "pages/user/enter_order/enter_order",
     "pages/user/eggs/eggs",
     "pages/user/chicken/chicken",
     "pages/user/vip/vip",
@@ -16,14 +17,22 @@
     "pages/user/goods_order/goods_order",
     "pages/user/order_dtl/order_dtl",
     "pages/user/team_order/team_order",
+    "pages/user/self_order/self_order",
     "pages/user/customer/customer",
     "pages/user/comment/comment",
     "pages/user/agent/agent",
     "pages/user/store/store",
     "pages/user/decorate/decorate",
     "pages/user/update/update",
+    "pages/shop/pinglun/pinglun",
+    "pages/shop/address/list",
+    "pages/shop/address/update",
+    "pages/shop/address/add",
+    "pages/shop/success/success",
     "pages/shop/comment/comment",
-    
+    "pages/shop/pintuan/pintuan",
+    "pages/shop/pintuan_list/ptlist",
+    "pages/shop/product/product",
     "pages/shop/prolist/prolist"
   ],
   "window": {

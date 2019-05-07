@@ -1,4 +1,5 @@
 /* components/component.wxss */
+
 .flex {
   display: -webkit-box;
   display: -moz-box;
@@ -8,13 +9,13 @@
   display: box;
   flex-wrap: wrap;
 }
- 
+
 .noWarp {
   flex-wrap: nowrap;
 }
- 
+
 /*元素居中*/
- 
+
 .alignC {
   align-items: center;
   -webkit-box-align: center;
@@ -23,9 +24,9 @@
   -ms-align-items: center;
   -o-align-items: center;
 }
- 
+
 /*水平排列*/
- 
+
 .flexH {
   -webkit-box-orient: horizontal;
   -webkit-flex-direction: row;
@@ -34,9 +35,9 @@
   -o-flex-direction: row;
   flex-direction: row;
 }
- 
+
 /*垂直排列*/
- 
+
 .flexV {
   -webkit-box-orient: vertical;
   -webkit-flex-direction: column;
@@ -45,9 +46,9 @@
   -o-flex-direction: column;
   flex-direction: column;
 }
- 
+
 /*两端对齐*/
- 
+
 .flexSa {
   -webkit-box-pack: justify;
   justify-content: space-around;
@@ -56,9 +57,9 @@
   -ms-justify-content: space-around;
   -o-justify-content: space-around;
 }
- 
+
 /*居中对齐*/
- 
+
 .flexC {
   -webkit-box-pack: center;
   justify-content: center;
@@ -67,7 +68,7 @@
   -ms-justify-content: center;
   -o-justify-content: center;
 }
- 
+
 .flexSb {
   justify-content: space-between;
   -webkit-justify-content: space-between;
@@ -75,7 +76,7 @@
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
 }
- 
+
 .flexS {
   -webkit-box-pack: start;
   justify-content: flex-start;
@@ -84,7 +85,7 @@
   -ms-justify-content: flex-start;
   -o-justify-content: flex-start;
 }
- 
+
 .flexE {
   -webkit-box-pack: end;
   justify-content: flex-end;
@@ -93,14 +94,14 @@
   -ms-justify-content: flex-end;
   -o-justify-content: flex-end;
 }
- 
+
 .line1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 40rpx;
 }
- 
+
 .commonHead {
   width: 100%;
   height: 128rpx;
@@ -113,7 +114,7 @@
   z-index: 10;
   top: 0;
 }
- 
+
 .commonHead-wrap {
   width: 100%;
   position: absolute;
@@ -123,15 +124,15 @@
   height: 45px;
   line-height: 45px;
 }
- 
+
 .commonHead_left {
   width: 100rpx;
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0
+  top: 0;
 }
- 
+
 .commonHead_left_back {
   width: 100%;
   height: 100%;
@@ -140,6 +141,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .commonHead_left_home {
   width: 100%;
   height: 100%;
@@ -148,7 +150,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
- 
+
 .commonHead_right {
   /* width: 450rpx; */
   width: 100%;
@@ -157,11 +159,12 @@
   text-align: center;
   font-size: 30rpx;
   overflow: hidden;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
- 
+
 .commonHead_right_text {
   /* width: 450rpx; */
   width: 280rpx;
   margin: 0 auto;
+  font-size: 30rpx;
 }

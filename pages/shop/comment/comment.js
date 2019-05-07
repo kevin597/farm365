@@ -9,9 +9,10 @@ Page({
       "bg_color": "#fff", //默认transparent
       "color": "#000", //默认transparent
       "flag": 1, //0: 无返回；1：返回上一级；2：home
-      "name": "上传图片", //默认为空
+      "name": "评价", //默认为空
     },
-    imgs: []
+    imgs: [],
+    videos: [],
   },
 
   /**
@@ -160,6 +161,31 @@ Page({
         console.log('上传失败')
       }
     })
-  }
+  },
+
+
+  //上传视频
+  chooseVideo: function () {
+    var imgs = this.data.imgs;
+    wx.chooseVideo({
+      success: function (res) {
+        imgs.push(res.tempFilePath);
+        this.setData({
+          imgs: imgs
+        });
+
+      }.bind(this)
+    })
+  },
+
+  //删除视频
+  deleteVideo: function (e) {
+    var form = this.data.form;
+    var idx = e.currentTarget.dataset.videoIndex;
+    form.videos.splice(idx, 1);
+    this.setData({
+      form: form
+    });
+  },
 
 })

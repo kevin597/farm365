@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "提交订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "orderNav": "/pages/user/components/orderNav"
+  }
+}

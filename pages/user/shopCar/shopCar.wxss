@@ -1,1 +1,114 @@
 /* pages/user/shopCar/shopCar.wxss */
+@import '/pages/user/common.wxss';
+
+.shopCar_wrap{
+  overflow: hidden;
+  width: 100%;
+}
+.shopCar_wrap .box{
+  margin:12px 15px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.shopCar_wrap .box .top{
+  line-height: 44px;
+  padding: 0 12px;
+}
+.shopCar_wrap .box .top .name{
+  padding-left:5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.shopCar_wrap .box .top .del_btn{
+  color: #888;
+}
+
+.shopCar_wrap .box .bot{
+  padding:0 12px;
+}
+.shopCar_wrap .box .bot .goods{
+  padding: 10px 0;
+}
+.shopCar_wrap .box .bot .photo{
+  width: 90px;
+  height:90px;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.shopCar_wrap .box .bot .photo .img{
+  width: 100%;
+  height: 100%;
+  -webkit-object-fit:coveer;
+  object-fit: cover;
+}
+.shopCar_wrap .box .bot .info{
+  overflow: hidden;
+  position: relative;
+}
+.shopCar_wrap .box .bot .info .name{
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+}
+.shopCar_wrap .box .bot .info .oth{
+  font-size: 14px;
+  line-height: 18px;
+  padding-top:2px;
+  padding-bottom:10px;
+  color: #999;
+}
+.shopCar_wrap .box .bot .info .val{
+  font-size: 16px;
+  color: #e90000;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+
+
+
+
+.operate_mod{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius:3px;
+  font-size: 12px;
+}
+.operate_mod .reduce_btn,.operate_mod .add_btn{
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.operate_mod .reduce_btn::before,.operate_mod .add_btn::before{
+  content:'';
+  width: 40%;
+  height: 2px;
+  background-color: #bbb;
+  position: absolute;
+  left:30%;
+  top:50%;
+  margin-top: -1px;
+}
+.operate_mod .add_btn::after{
+  content:'';
+  width: 2px;
+  height: 40%;
+  background-color: #bbb;
+  position: absolute;
+  left:50%;
+  top:30%;
+  margin-left: -1px;
+}
+.operate_mod .num{
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 24px;
+  line-height: 24px;
+  min-width: 32px;
+  text-align: center;
+}

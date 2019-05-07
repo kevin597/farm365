@@ -1,0 +1,3 @@
+/* pages/user/enter_order/enter_order.wxss */
+@import '/pages/user/common.wxss';
+@import '/pages/user/order_dtl/order_dtl.wxss';

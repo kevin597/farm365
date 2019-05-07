@@ -1,4 +1,5 @@
 <!--pages/shop/product/product.wxml-->
+<wxs module="filters" src="../../../filter/filter.wxs"></wxs>
 <!-- 商品主图 -->
 <view class="swiper">
   <swiper class="swiper" bindchange="swiperChange" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}">
@@ -12,10 +13,18 @@
 </view>
 
 <!-- 商品标题 -->
+<view class='flex-row product-title'>
+  <view class='float-left font-color-red font-size-40 price flex-full'>￥{{filters.toNumber(product.price)}}</view>
+  <view class='float-left text-a-r font-size-24 buy'>{{product.buy}}人购买</view>
+</view>
+<view class='flex-row product-title flex-top'>
+  <view class='float-left font-size-30 title flex-full'>{{product.title}}</view>
+  <view class='float-left text-a-r font-size-24 free'>{{product.free}}</view>
+</view>
 
 <!-- 商品评价 -->
-<view class='product-info-title font-size-30'>商品评价(12344）
-  <navigator class='more font-size-26' url=''>查看更多</navigator>
+<view class='product-info-title font-size-30'>商品评价({{product.pinglun}}）
+  <navigator class='more font-size-26' url='../pinglun/pinglun'>查看更多</navigator>
 </view>
 
 <view class='flex-row pingLun flex-top' wx:for="{{pinglun}}" wx:key="this">
@@ -25,20 +34,14 @@
     <text class='pingLun-time text-a-r font-size-22'>{{item.time}}</text>
     <view class='pingLun-title font-size-26'>{{item.content}}</view>
     <view class='img' wx:if="{{item.src.length>0}}">
-      <image src="{{item}}" wx:for="{{item.src}}" wx:key="this"></image>
+      <image src="{{subitem}}" wx:for="{{item.src}}" wx:for-item="subitem" data-src="{{item.src}}" data-imgs='{{subitem}}' wx:key="this" bindtap="previewImg"></image>
     </view>
   </view>
 </view>
 
 <!-- 商品详情 -->
 <view class='product-info-title font-size-30'>商品详情</view>
-<text class='product-info-content'>
-  品牌名称：密农人家 \n
-  储藏方法：冰箱冷藏 \n
-  产地: 中国大陆 \n
-  保质期：40 天 \n
-  规格: 100枚
-</text>
+<text class='product-info-content'>{{product.content}}</text>
 
 <!-- 商品图片 -->
 <view class='content'>
@@ -49,7 +52,7 @@
 
 <!-- 底部按钮 -->
 <view class='footer flex-row'>
-  <navigator class='addCart font-size-22'>
+  <navigator class='addCart font-size-22' url='/pages/shop/cart/cart'>
     <view class='iconfont icon-caigou-xianxing'></view>
     <text>添加购物车</text>
   </navigator>
@@ -57,9 +60,9 @@
     <view class='iconfont icon-kefu'></view>
     <text>联系客服</text>
   </navigator>
-  <navigator class='goShop font-size-22'>
+  <navigator url='../shop/shop' class='goShop font-size-22'>
     <view class='iconfont icon-shop'></view>
     <text>进入店铺</text>
   </navigator>
-  <navigator class='submitOrder font-size-32 flex-full' url=''>提交订单</navigator>
+  <view bindtap='btn_submit_order' class='submitOrder font-size-32 flex-full'>提交订单</view>
 </view>

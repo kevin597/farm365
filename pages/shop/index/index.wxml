@@ -29,12 +29,12 @@
 </navigator>
 
 <view class='product_title'>
-  <navigator class='product_title_a' url='/pages/user/index/index'>查看所有拼团</navigator>
+  <navigator class='product_title_a' url='../pintuan_list/ptlist'>查看所有拼团</navigator>
 </view>
 
 <view class='product_list_ul'>
   <view class='product_list_li' wx:for="{{productList}}" wx:key="{{item.proid}}" wx:for-index="idx" bindtap='skip_product' data-proid='{{item.proid}}'>
-    <image src="{{item.src}}" mode="aspectFit" class="pro_list_img" id="{{idx}}"></image>
+    <image src="{{item.src}}" class="pro_list_img" id="{{idx}}"></image>
     <view class='pro_list_title'>{{item.date}}</view>
     <view class='pro_list_info'>
       <text class='width60 font-size-28'>{{item.title}}</text>

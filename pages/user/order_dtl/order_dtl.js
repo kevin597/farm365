@@ -17,7 +17,6 @@ Page({
     this.setData({
       order: orderData[0],
     });
-    console.log(this.data.order);
   },
 
   /**

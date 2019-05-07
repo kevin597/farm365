@@ -1,6 +1,6 @@
 var jsonData = [{
   "proid": 1,
-  "title": "张小姐的拼团1",
+  "title": "农家散养土鸡蛋纯天然鲜活有机柴鸡蛋正宗",
   "src": "/images/shop/product.jpg",
   "date": "23:34:05",
   "price": "60.00",
@@ -9,15 +9,15 @@ var jsonData = [{
 }, {
   "proid": 2,
   "title": "李先生的拼团2",
-  "src": "/images/shop/product.jpg",
+    "src": "/images/shop/pic.jpg",
   "date": "23:34:05",
   "price": "50.00",
   "total": "324",
   "count": 3
 }, {
   "proid": 3,
-  "title": "王先生的拼团3",
-  "src": "/images/shop/product.jpg",
+    "title": "农家散养土鸡蛋纯天然鲜活有机柴鸡蛋正宗100个/箱（整箱装）",
+    "src": "/images/default/180x180.jpg",
   "date": "23:34:05",
   "price": "30.00",
   "total": "24",

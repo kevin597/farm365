@@ -44,7 +44,7 @@
 				{
 					"id": 0,
 					"name": "diy",
-					"pathName": "pages/user/update/update",
+					"pathName": "pages/user/enter_order/enter_order",
 					"query": "",
 					"scene": null
 				}

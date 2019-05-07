@@ -148,7 +148,7 @@ Page({
     var proid = e.currentTarget.dataset.proid;
     //console.log(proid);
     wx.navigateTo({
-      url: '/pages/shop/product/product?proid=' + proid,
+      url: '/pages/shop/pintuan/pintuan?proid=' + proid,
     })
   },
 })

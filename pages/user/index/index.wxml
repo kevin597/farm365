@@ -54,7 +54,7 @@
 
 <!-- 功能列表 -->
 <view class='dm-norlist top-line bottom-line bg-w dm-mt'>
-  <navigator class='list arrow_gray flex-row bottom-line' url=''>
+  <navigator class='list arrow_gray flex-row bottom-line' url='/pages/user/self_order/self_order'>
     <view class='name flex-full'>自提订单</view>
   </navigator>
   <navigator class='list arrow_gray flex-row bottom-line' url=''>

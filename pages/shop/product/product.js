@@ -1,6 +1,5 @@
 // pages/shop/product/product.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -15,13 +14,23 @@ Page({
     interval: 3000,
     duration: 1000,
     current: 0,
-
+    product: {
+      title: "农家散养土鸡蛋纯天然鲜活有机柴鸡蛋正宗100个/箱（整箱装）",
+      price: 50.00,
+      buy: 123,
+      free: "免运费",
+      pinglun: 12344,
+      content: "品牌名称：密农人家 \n储藏方法：冰箱冷藏 \n产地: 中国大陆 \n保质期：40 天 \n规格: 100枚"
+    },
     pinglun: [{
         name: "张小姐",
         img: "/images/default/188x188.jpg",
         time: "2019-04-11",
         content: "包装严实整齐，发货快!赞赞赞!感谢客服冬瓜细心周到的服务!赞赞赞!",
-        src: ["/images/default/180x180.jpg", "/images/default/180x180.jpg", "/images/default/180x180.jpg"]
+        src: ['https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+          'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+          'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+        ]
       },
       {
         name: "张小姐",
@@ -95,11 +104,31 @@ Page({
   onShareAppMessage: function() {
 
   },
-
+  //焦点图显示数字
   swiperChange: function(e) {
     var that = this;
     that.setData({
       current: e.detail.current
     })
   },
+
+  // 预览图片
+  previewImg: function(e) {
+    var imgs = e.currentTarget.dataset.imgs;
+    var src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: imgs, // 当前显示图片的http链接
+      urls: src, // 需要预览的图片http链接列表
+    })
+  },
+
+
+  //提交订单
+  btn_submit_order: function () {
+    var that = this;
+    console.log(that.data.totalPrice);
+    wx.navigateTo({
+      url: '/pages/shop/submit_order/submit_order'
+    })
+  }
 })

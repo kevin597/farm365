@@ -1,2 +1,52 @@
 <!--pages/user/shopCar/shopCar.wxml-->
-<text>pages/user/shopCar/shopCar.wxml</text>
+<scroll-view scroll-y='{{true}}' style='width:100%;height:calc(100% - 46px)'>
+  <view class='shopCar_wrap'>
+    
+    <view class='box bg-w' wx:for="{{list}}" wx:key="item.id" wx:if='{{list.length > 0}}'>
+      <view class='top h4 flex-row'>
+        <view class='flex-full nowrap'>
+          <checkbox-group bindchange="allChange" data-val='{{item.id}}'>
+            <label class="checkbox">
+              <checkbox checked='{{item.check}}' /><text class='name'>{{item.store}}</text>
+            </label>
+          </checkbox-group>
+        </view>
+        <view class='del_btn' bindtap='del_list' data-car-id='{{item.id}}'>删除</view>
+      </view>
+
+      <view class='bot top-line'>
+        <checkbox-group bindchange="checkboxChange" data-val='{{item.id}}'>
+          <view class='goods top-line flex-row' wx:for='{{item.goods}}' wx:for-item='sub' wx:key='sub.id'>
+            <label class="checkbox">
+              <checkbox value='{{sub.id}}' checked='{{sub.check}}' />
+            </label>
+            <view class='photo'>
+              <image class='img' src='{{sub.photo}}'></image>
+            </view>
+            <view class='info flex-full'>
+              <view class='name'>{{sub.name}}</view>
+              <view class='oth'>{{sub.oth}}</view>
+              <view class='val'>￥{{sub.val}}</view>
+              <view class='operate_mod flex-row'>
+                <view class='reduce_btn' bindtap='reduce_btn' data-order-id='{{item.id}}' data-good-id='{{sub.id}}'></view>
+                <view class='num flex-full'>{{sub.num}}</view>
+                <view class='add_btn' bindtap='add_btn' data-order-id='{{item.id}}' data-good-id='{{sub.id}}'></view>
+              </view>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+      
+    </view>
+
+    <view class='empty' wx:if='{{list.length == 0}}'>
+      <text class='h5'>暂无任何商品</text>
+    </view>
+
+  </view>
+</scroll-view>
+
+<view class='bottom_mod top-line flex-row' wx:if='{{list.length > 0}}'>
+  <view class='val flex-full'>合计：<text class='main_color'>￥{{total > 0 ? total : '0.00'}}</text></view>
+  <view class='btn' bindtap='submit'>去结算</view>
+</view>
